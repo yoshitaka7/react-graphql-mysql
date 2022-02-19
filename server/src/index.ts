@@ -6,6 +6,7 @@ import { createConnection } from "typeorm";
 import { Users } from "./Entities/Users";
 
 const main = async () => {
+  //mysqlサーバーとの接続
   await createConnection({
     type: "mysql",
     database: "GraphqlCRUD",
@@ -24,6 +25,7 @@ const main = async () => {
     graphiql: true
   }))
 
+  //3001番ポートでDBサーバー
   app.listen(3001, () => {
     console.log("server running on port 3001")
   });

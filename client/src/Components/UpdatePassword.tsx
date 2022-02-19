@@ -3,10 +3,12 @@ import { UPDATE_PASSWORD } from "../Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 
 function UpdatePassword() {
+  //入力値のstate
   const [username, setUsername] = useState("");
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
+  //ボタン押下時Mutation走らせる
   const [updatePassword, { error }] = useMutation(UPDATE_PASSWORD);
 
   if (error) {

@@ -4,9 +4,9 @@ import { DELETE_USER } from "../Graphql/Mutation";
 import { useQuery, useMutation } from '@apollo/client'
 
 function ListOfUsers() {
-  const { data } = useQuery(GET_ALL_USERS);
+  const { data } = useQuery(GET_ALL_USERS);  //ユーザーデータ取得
 
-  const [deleteUser, { error }] = useMutation(DELETE_USER);
+  const [deleteUser, { error }] = useMutation(DELETE_USER);  //押下時idを渡してMutation走らせる
 
   return <div>
     {data &&

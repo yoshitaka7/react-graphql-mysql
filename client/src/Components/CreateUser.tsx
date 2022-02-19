@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { CREATE_USER } from "../Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 function CreateUser() {
+  //入力値のstate
   const [name, setName] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const [createUser, { error }] = useMutation(CREATE_USER);
+  const [createUser, { error }] = useMutation(CREATE_USER);  //ボタン押下でmutationが走る
 
   return (
     <div className="createUser">

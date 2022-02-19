@@ -3,6 +3,7 @@ import { UserType } from '../TypeDefs/User';
 import { MessageType } from '../TypeDefs/Messages';
 import { Users } from '../../Entities/Users';
 
+//ユーザー作成
 export const CREATE_USER = {
   type: UserType,
   args: {
@@ -17,6 +18,7 @@ export const CREATE_USER = {
   },
 }
 
+//パスワード更新
 export const UPDATE_PASSWORD = {
   type: MessageType,
   args: {
@@ -45,6 +47,7 @@ export const UPDATE_PASSWORD = {
   }
 }
 
+//ユーザー削除
 export const DELETE_USER = {
   type: MessageType,
   args: {

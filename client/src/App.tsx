@@ -6,6 +6,7 @@ import UpdatePassword from "./Components/UpdatePassword";
 import "./App.css";
 
 function App() {
+  //Apolloとの接続
   const client = new ApolloClient({
     uri: "http://localhost:3001/graphql",
     cache: new InMemoryCache(),
